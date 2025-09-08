@@ -13,9 +13,5 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './login.css'
 })
 export class Login {
-  constructor(iconRegistry:MatIconRegistry, domSanitizer:DomSanitizer){
-    iconRegistry.addSvgIcon("logo",
-      domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/logo.svg")
-    )
-  }
+  constructor(){}
 }

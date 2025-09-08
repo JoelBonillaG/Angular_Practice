@@ -1,1 +1,22 @@
-<p>menu works!</p>
+<mat-nav-list class="container">
+  <div class="logo">
+    <mat-icon class="icon" svgIcon="logo"></mat-icon>
+  </div>
+  <div>
+    @for (option of menuOptions; track $index) {
+    <mat-list-item>
+      <a routerLink="{{ option.route }}">
+        <button mat-icon-button>
+          <mat-icon svgIcon="{{ option.icon }}"></mat-icon>
+          <span>{{ option.label }}</span>
+        </button>
+      </a>
+    </mat-list-item>
+    }
+  </div>
+  <div class="user">
+    <mat-icon class="icon" svgIcon="user"></mat-icon>
+    <p>Admin</p>
+    <button class="btn-close" matButton="filled">Cerrar Sesión</button>
+  </div>
+</mat-nav-list>
