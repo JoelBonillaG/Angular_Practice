@@ -3,12 +3,12 @@
     <mat-icon class="icon" svgIcon="logo"></mat-icon>
   </div>
   <div>
-    @for (option of menuOptions; track $index) {
+    @for (option of listMenu; track $index) {
     <mat-list-item>
-      <a routerLink="{{ option.route }}">
+      <a routerLink="{{ option.url}}">
         <button mat-icon-button>
           <mat-icon svgIcon="{{ option.icon }}"></mat-icon>
-          <span>{{ option.label }}</span>
+          <span>{{ option.title }}</span>
         </button>
       </a>
     </mat-list-item>

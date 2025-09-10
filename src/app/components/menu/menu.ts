@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { MatListModule } from '@angular/material/list';
-import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
+import { MenuInterface } from '../../interfaces/menu-interface';
+import { MenuService } from '../../services/menu-service';
 @Component({
   selector: 'app-menu',
   imports: [MatListModule,
@@ -16,10 +17,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './menu.css'
 })
 export class Menu {
-  constructor(){}
-    menuOptions = [
-    { label: 'Clientes', icon: 'client', route: 'clients' },
-    { label: 'Facturas', icon: 'invoice', route: 'invoices' },
-   
-  ];
+ listMenu: MenuInterface[];
+
+  constructor(private menuSrv: MenuService) {
+    this.listMenu = this.menuSrv.getMenu();
+  }
+
 }

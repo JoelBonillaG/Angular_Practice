@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
-import { DomSanitizer } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button'; 
+import { ButtonComponent } from '../../../components/button/button';
+import { InputComponent } from '../../../components/input/input';
+
 @Component({
   selector: 'app-login',
-  imports: [MatIconModule,    MatFormFieldModule,
-    MatInputModule,MatButtonModule
-  ],
+  standalone: true,
+  imports: [MatIconModule, MatFormFieldModule, MatInputModule, MatButtonModule,ButtonComponent,InputComponent],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
 export class Login {
-  constructor(){}
+
 }

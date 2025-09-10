@@ -15,6 +15,16 @@
     <mat-form-field appearance="outline" class="full-width">
       <input matInput type="password" placeholder="Ingrese la contraseña">
     </mat-form-field>
+    
+<!--Uso de componente input personalizado-->
+
+<strong class="text">Input Personalizado</strong>
+<app-input
+  placeholder="Ingrese ... "
+  type="password"
+  appearance="outline">
+</app-input>
+
         <!--OLVIDASTE CONTRASEÑA-->
  <div class="forgot-password">
         <a href="#">¿Olvidaste tu contraseña?</a>
@@ -22,5 +32,9 @@
  </div>
      <!--BOTON INICIAR SESION-->
 <button mat-raised-button color="primary" class="btn-login">Iniciar Sesión</button>
-  </form>
+
+  <!--Uso de componente botón personalizado-->
+  <app-button label="Boton personalizado" type="filled" color="primary"></app-button>
+
+</form>
 </div>

@@ -9,7 +9,7 @@ import { ListInvoices } from './invoice/components/list-invoices/list-invoices';
 import { IconService } from './services/icon-service';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Footer,Login,MatSidenavModule,Menu,ListInvoices],
+  imports: [RouterOutlet,MatSidenavModule,Menu, /*ListInvoices,Header,Footer,Login*/],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
